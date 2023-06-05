@@ -7,7 +7,7 @@
 Package clamd Golang Clamd client
 Clamd - Golang clamd client
 */
-package clamd
+package goclamd
 
 import (
 	"bytes"
@@ -22,14 +22,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/baruwa-enterprise/clamd/protocol"
+	"github.com/benjaminbear/goclamd/protocol"
 )
 
 const (
 	defaultTimeout      = 15 * time.Second
 	defaultSleep        = 1 * time.Second
 	defaultCmdTimeout   = 1 * time.Minute
-	defaultSock         = "/var/run/clamav/clamd.sock"
+	defaultSock         = "/var/run/clamav/clamd.ctl"
 	invalidRespErr      = "Invalid server response: %s"
 	unsupportedProtoErr = "Protocol: %s is not supported"
 	unixSockErr         = "The unix socket: %s does not exist"

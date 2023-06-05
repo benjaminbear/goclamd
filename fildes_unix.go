@@ -1,4 +1,5 @@
-//+build !windows
+//go:build !windows
+// +build !windows
 
 // Copyright (C) 2018-2021 Andrew Colin Kissa <andrew@datopdog.io>
 // This Source Code Form is subject to the terms of the Mozilla Public
@@ -9,7 +10,7 @@
 Package clamd Golang Clamd client
 Clamd - Golang clamd client
 */
-package clamd
+package goclamd
 
 import (
 	"fmt"
@@ -18,7 +19,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/baruwa-enterprise/clamd/protocol"
+	"github.com/benjaminbear/goclamd/protocol"
 )
 
 func (c *Client) fildesScan(tc *textproto.Conn, conn net.Conn, p string) (err error) {

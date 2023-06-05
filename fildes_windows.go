@@ -7,7 +7,7 @@
 Package clamd Golang Clamd client
 Clamd - Golang clamd client
 */
-package clamd
+package goclamd
 
 import (
 	"errors"
